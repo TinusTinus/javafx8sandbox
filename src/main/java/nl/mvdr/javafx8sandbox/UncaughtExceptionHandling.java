@@ -1,4 +1,4 @@
-package nl.mvdr.javafx8playground;
+package nl.mvdr.javafx8sandbox;
 
 import java.util.logging.Logger;
 

@@ -1,4 +1,4 @@
-package nl.mvdr.javafx8playground;
+package nl.mvdr.javafx8sandbox;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
