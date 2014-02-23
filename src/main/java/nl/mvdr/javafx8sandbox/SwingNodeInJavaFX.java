@@ -12,6 +12,11 @@ import javax.swing.JButton;
 /**
  * JavaFX application containing a simple embedded Swing application.
  * 
+ * Note: adding jvm argument "-Djavafx.embed.singleThread=true" enables an experimental feature: merging the JavaFX and
+ * Swing event dispatcher threads into a single thread. If this is enabled, there is no more need to use
+ * {@link javax.swing.SwingUtilities#invokeLater(Runnable)}; you can simply always use
+ * {@link javafx.application.Platform#runLater(Runnable)}.
+ * 
  * @author Martijn van de Rijdt
  */
 public class SwingNodeInJavaFX extends Application {
