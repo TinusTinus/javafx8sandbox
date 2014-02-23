@@ -19,13 +19,13 @@ public class SwingNodeInJavaFX extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         JButton swingButton = new JButton("Swing Button!");
-        swingButton.addActionListener(event -> System.out.println("Swing button clicked."));
+        swingButton.addActionListener(event -> System.out.println(Thread.currentThread().getName() + " - Swing button clicked."));
         
         SwingNode swingNode = new SwingNode();
         swingNode.setContent(swingButton);
 
         Button javaFXButton = new Button("JavaFX Button!");
-        javaFXButton.setOnAction(event -> System.out.println("JavaFX button clicked."));
+        javaFXButton.setOnAction(event -> System.out.println(Thread.currentThread().getName() + " - JavaFX button clicked."));
         
         FlowPane pane = new FlowPane(swingNode, javaFXButton);
         
