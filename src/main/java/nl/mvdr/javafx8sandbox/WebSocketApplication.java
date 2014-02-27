@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * 
  * @author Martijn van de Rijdt
  */
-public class WebSocketsApplication extends Application {
+public class WebSocketApplication extends Application {
     /** {@inheritDoc} */
     @Override
     public void start(Stage primaryStage) {
