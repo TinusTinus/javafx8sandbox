@@ -18,7 +18,7 @@ public class UncaughtExceptionHandling extends Application {
 
     /** {@inheritDoc} */
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         // Set an uncaught exception handler, which logs the exception message as a warning.
         Thread.currentThread().setUncaughtExceptionHandler(
                 (thread, throwable) -> log.warning("An exception occurred! " + throwable.getMessage()));

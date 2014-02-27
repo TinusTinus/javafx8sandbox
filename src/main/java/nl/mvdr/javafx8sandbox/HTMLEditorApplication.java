@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class HTMLEditorApplication extends Application {
     /** {@inheritDoc} */
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         HTMLEditor editor = new HTMLEditor();
         
         primaryStage.setTitle("HTML Editor In JavaFX");
