@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * 
  * @author Martijn van de Rijdt
  */
-public class HTMLEditorInJavaFX extends Application {
+public class HTMLEditorApplication extends Application {
     /** {@inheritDoc} */
     @Override
     public void start(Stage primaryStage) throws Exception {
