@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 public class ThreeDeeApplication extends Application {
     /** {@inheritDoc} */
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Sphere sphere = new Sphere(100);
         sphere.setTranslateX(200);
         sphere.setTranslateY(200);
