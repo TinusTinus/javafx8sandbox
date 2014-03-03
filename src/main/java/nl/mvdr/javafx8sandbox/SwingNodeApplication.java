@@ -19,10 +19,10 @@ import javax.swing.JButton;
  * 
  * @author Martijn van de Rijdt
  */
-public class SwingNodeInJavaFX extends Application {
+public class SwingNodeApplication extends Application {
     /** {@inheritDoc} */
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         JButton swingButton = new JButton("Swing Button!");
         swingButton.addActionListener(event -> System.out.println(Thread.currentThread().getName() + " - Swing button clicked."));
         
