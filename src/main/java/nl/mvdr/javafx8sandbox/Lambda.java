@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class Lambda extends Application {
     /** {@inheritDoc} */
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Button button = new Button("Press me!");
 
         // Without lambdas we would have to write something like:
