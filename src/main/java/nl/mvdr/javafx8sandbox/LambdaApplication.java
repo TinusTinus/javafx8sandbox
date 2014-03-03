@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * 
  * @author Martijn van de Rijdt
  */
-public class Lambda extends Application {
+public class LambdaApplication extends Application {
     /** {@inheritDoc} */
     @Override
     public void start(Stage primaryStage) {

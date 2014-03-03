@@ -12,7 +12,7 @@ import javafx.stage.Stage;
  * 
  * @author Martijn van de Rijdt
  */
-public class UncaughtExceptionHandling extends Application {
+public class UncaughtExceptionHandlingApplication extends Application {
     /** Log. */
     private static final Logger log = Logger.getAnonymousLogger();
 
