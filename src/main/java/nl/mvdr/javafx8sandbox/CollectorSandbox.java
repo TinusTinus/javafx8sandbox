@@ -15,13 +15,17 @@ public class CollectorSandbox {
      * @param args command line parameters; these are ignored
      */
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("Jan", "Klaas", "Piet");
+        List<String> names = Arrays.asList("Jan", "Klaas", "Piet", "Ton", "Kees", "Sjaak", "Herman", "en", "nog", "meer", "namen");
 
+        long start = System.currentTimeMillis();
+        
         String string = names
                 .parallelStream()
                 .collect(CollectorSandbox::supply, CollectorSandbox::accumulate, CollectorSandbox::combine)
                 .toString();
         System.out.println(string);
+        
+        System.out.println("Time spent: " + (System.currentTimeMillis() - start) + "milliseconds.");
     }
     
     /**
@@ -30,7 +34,7 @@ public class CollectorSandbox {
      * @return
      */
     private static StringBuilder supply() {
-        System.out.println("Creating new string buffer.");
+        System.out.println(Thread.currentThread().getName() + " - Creating new string buffer.");
         return new StringBuilder();
     }
     
@@ -41,7 +45,14 @@ public class CollectorSandbox {
      * @param string string
      */
     private static void accumulate(StringBuilder builder, String string) {
-        System.out.println("Appending to " + builder + ": " + string);
+        System.out.println(Thread.currentThread().getName() + " - Appending to " + builder + ": " + string);
+        
+        try {
+            Thread.sleep(1_000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
         builder.append(string);
     }
     
@@ -52,7 +63,7 @@ public class CollectorSandbox {
      * @param string string
      */
     private static void combine(StringBuilder builder0, StringBuilder builder1) {
-        System.out.println("Combining " + builder0 + " and " + builder1);
+        System.out.println(Thread.currentThread().getName() + " - Combining " + builder0 + " and " + builder1);
         builder0.append(builder1);
     }
 }
