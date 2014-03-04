@@ -34,7 +34,7 @@ public class CollectorSandbox {
      * @return
      */
     private static StringBuilder supply() {
-        System.out.println(Thread.currentThread().getName() + " - Creating new string buffer.");
+        log("Creating new string buffer.");
         return new StringBuilder();
     }
     
@@ -45,7 +45,7 @@ public class CollectorSandbox {
      * @param string string
      */
     private static void accumulate(StringBuilder builder, String string) {
-        System.out.println(Thread.currentThread().getName() + " - Appending to " + builder + ": " + string);
+        log("Appending to " + builder + ": " + string);
         
         try {
             Thread.sleep(1_000);
@@ -63,7 +63,16 @@ public class CollectorSandbox {
      * @param builder1 builder
      */
     private static void combine(StringBuilder builder0, StringBuilder builder1) {
-        System.out.println(Thread.currentThread().getName() + " - Combining " + builder0 + " and " + builder1);
+        log("Combining " + builder0 + " and " + builder1);
         builder0.append(builder1);
+    }
+    
+    /**
+     * Logs the given message.
+     * 
+     * @param message message
+     */
+    private static void log(String message) {
+        System.out.println(Thread.currentThread().getName() + " - " + message);
     }
 }
