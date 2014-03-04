@@ -57,10 +57,10 @@ public class CollectorSandbox {
     }
     
     /**
-     * Accumulates the given string into the given string builder.
+     * Combines the given builders.
      * 
-     * @param builder builder
-     * @param string string
+     * @param builder0 builder
+     * @param builder1 builder
      */
     private static void combine(StringBuilder builder0, StringBuilder builder1) {
         System.out.println(Thread.currentThread().getName() + " - Combining " + builder0 + " and " + builder1);
