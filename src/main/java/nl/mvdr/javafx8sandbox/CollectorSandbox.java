@@ -45,7 +45,7 @@ public class CollectorSandbox {
      * @param string string
      */
     private static void accumulate(StringBuilder builder, String string) {
-        log("Appending to " + builder + ": " + string);
+        log("Appending to builder \"" + builder + "\": \"" + string + "\"");
         
         try {
             Thread.sleep(1_000);
@@ -63,7 +63,7 @@ public class CollectorSandbox {
      * @param builder1 builder
      */
     private static void combine(StringBuilder builder0, StringBuilder builder1) {
-        log("Combining " + builder0 + " and " + builder1);
+        log("Combining string builders \"" + builder0 + "\" and \"" + builder1 + "\"");
         builder0.append(builder1);
     }
     
