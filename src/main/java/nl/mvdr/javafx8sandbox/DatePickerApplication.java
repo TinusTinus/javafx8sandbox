@@ -20,6 +20,7 @@ public class DatePickerApplication extends Application {
     public void start(Stage primaryStage) {
         LocalDate java8Release = LocalDate.of(2014, 3, 18);
         DatePicker datePicker = new DatePicker(java8Release);
+        datePicker.setOnAction(event -> System.out.println(datePicker.getValue()));
         
         primaryStage.setTitle("Date Picker");
         Scene scene = new Scene(new Group(datePicker));
