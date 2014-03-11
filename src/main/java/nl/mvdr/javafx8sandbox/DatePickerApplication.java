@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
- * Application showing off how to create a JavaFX component using a builder. Note that the builder API is deprecated.
+ * Application showing off the DatePicker component.
  * 
  * @author Martijn van de Rijdt
  */
